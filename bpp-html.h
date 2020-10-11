@@ -1,7 +1,7 @@
 #pragma once
 
 #define BEGIN_HTML <!DOCTYPE html> <html lang="en"> <meta charset=utf-8>
-#define FONT(str) <font face=@@@str@@@>
+#define FONT(str) <font face=%%str%%>
 
 #define BEGIN_HEAD <head>
 #define DEFAULT_STYLE <style type=text/css>body{margin:40px auto;max-width:700px;text-align:justify;line-height:1.6; \
@@ -21,8 +21,8 @@
 #define BOLD(str) <b>@@str@@</b>
 #define ITALICS(str) <i>@@str@@</i>
 #define UNDERLINE(str) <u>@@str@@</u>
-#define LINK(text, link) <a href=@@@link@@@>text</a>
-#define ABBR(str, abb) <abbr title=@@@str@@@>abb</abbr>
+#define LINK(text, link) <a href=%%link%%>text</a>
+#define ABBR(str, abb) <abbr title=%%str%%>abb</abbr>
 
 #define BEGIN_LIST <ul>
 #define LIST_ITEM(str) <li>@@str@@</li>
@@ -37,6 +37,6 @@
 #define BEGIN_CENTER <center>
 #define END_CENTER </center>
 
-#define DIALOG(str) <dialog open>@@@str@@@</dialog>
+#define DIALOG(str) <dialog open>%%str%%</dialog>
 #define END_BODY </body>
 #define END_HTML </html>
