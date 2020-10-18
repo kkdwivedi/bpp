@@ -6,5 +6,5 @@ fi
 
 for var in "$@"
 do
-  cpp -E "$var" -I. | sed -e 's/@@"//g' -e 's/"@@//g' -e 's/%%//g' -e '/^#/d' -e '/^$/d'
+  sed -e "s/'/\&apos;/g" "$var" | cpp -E -I. -I./kkd/ | sed -e 's/@@/"/g' -e '/^#/d' -e '/^$/d'
 done

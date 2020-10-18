@@ -1,27 +1,30 @@
 #include <bpp-html.h>
-BEGIN_HTML
-BEGIN_HEAD
-TITLE("Homepage")
-FONT("monospace")
-DEFAULT_STYLE
-END_HEAD
-BEGIN_BODY
+#include <kkd.h>
 
-  HEADING2("Webshite")
-  BEGIN_PARA
-  I ITALICS("really") BOLD("hate") UNDERLINE("HTML.")
-  END_PARA
-  PARA("I mean it.")
+html(
+head(
+  title(/home/kkd)
+  stylesheet("default/style.css")
+)
 
-  BEGIN_NOTE
-  MARQUEE("You just won $2000")
-  END_NOTE
+header(b(Homepage))
 
-BEGIN_DROP_DOWN("Hidden Text")
-PARA("This world is full of pain.")
-END_DROP_DOWN
-
-DIALOG("systemd sucks")
-
-END_BODY
-END_HTML
+body(
+  layout(
+    left_sidebar(10%,
+      left_sidebar_entry(About, p(Add something about yourself here!))
+      left_sidebar_entry(Contact, p(xyz@foobar.com))
+    )
+    right_pane(
+      content(65%, Welcome user!,
+        p(
+          Lorem ispur doloo ... Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+        )
+      )
+      right_sidebar(33%,
+        right_sidebar_entry(Announcements, center(p(Here goes nothing.)))
+      )
+    )
+  )
+)
+)
