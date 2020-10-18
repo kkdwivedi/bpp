@@ -1,0 +1,10 @@
+bpp - C preprocessor based site generator
+-----------------------------------------
+
+To use, simply clone the repository, and start authoring files in it directly.
+Look at example.bpp for an example on how to write entries (and define your own
+widgets). Macros using @@str@@ in their expansion will automatically quote
+their arguments.
+
+Yes, abusing the C preprocessor for this was probably not a great idea, but
+it's too late.
