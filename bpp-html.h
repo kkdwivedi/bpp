@@ -1,10 +1,27 @@
 #pragma once
 
-#define html(str...) <!DOCTYPE html> <html lang="en"> <meta charset=utf-8>str</html>
+#define html(str...) \
+<!DOCTYPE html> <html lang="en"> <meta charset=utf-8>str</html>
 #define font(str...) <font face=@@str@@>
 #define head(str...) <head>str</head>
 #define stylesheet(str) <link rel="stylesheet" href=str type="text/css">
-#define style(str...) <style type=text/css>body{margin:40px auto;max-width:700px;text-align:justify;line-height:1.6; font-size:16px;padding:0 10px}h1,h2,h3{line-height:1.2} </style> <style> .kdiv { border: 2px outset black; text-align: center; } </style>
+#define style(str...)                                    \
+  <style type = text / css> body {                       \
+  margin:                                                \
+    40px auto;                                           \
+    max - width : 700px;                                 \
+    text - align : justify;                              \
+    line - height : 1.6;                                 \
+    font - size : 16px;                                  \
+  padding:                                               \
+    0 10px                                               \
+  }                                                      \
+  h1, h2, h3{line - height : 1.2}</ style><style>.kdiv { \
+  border:                                                \
+    2px outset black;                                    \
+    text - align : center;                               \
+  }                                                      \
+</style>
 #define title(str...) <title>str</title>
 #define body(str...) <body>str</body>
 #define break <br>
@@ -30,6 +47,10 @@
 #define drop_down(text...) <details>text</details>
 #define center(str...) <center>str</center>
 #define dialog(str...) <dialog open>@@str@@</dialog>
-#define table(widt, bord, cellp, str...) <table width=widt border=bord cellpadding=cellp>str</table>
+#define table(widt, bord, cellp, str...) \
+<table width=widt border=bord cellpadding=cellp>str</table>
 #define row(str...) <tr>str</tr>
-#define column(alig, valig, widt, str...) <td align=alig valign=valig style=@@width:widt@@>str</td>
+#define column(alig, valig, widt, str...) \
+<td align=alig valign=valig style=@@width:widt@@>str</td>
+#define image(widt, heigh, name, text) \
+<img src=name alt=@@text@@, width=@@widt@@, height=@@heigh@@>
